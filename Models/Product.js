@@ -45,7 +45,7 @@ Product.init({
         type: DataTypes.INTEGER,
         allowNull: false
     }
-}{
+},{
     sequelize,
     modelName: "Product",
     tableName: "products",
