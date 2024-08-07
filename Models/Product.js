@@ -35,11 +35,11 @@ Product.init({
     },
     created_at: {
         type: DataTypes.DATE,
-        defaultValue: Sequelize.NOW
+        defaultValue: sequelize.NOW
     },
     updated_at:{
         type:DataTypes.DATE,
-        defaultValue: Sequelize.NOW
+        defaultValue: sequelize.NOW
     },
     ca_id: {
         type: DataTypes.INTEGER,
