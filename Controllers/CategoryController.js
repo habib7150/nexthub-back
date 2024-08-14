@@ -1,10 +1,10 @@
-const CategorieService = require('../Services/CategorieService');
+const CategorieService = require('../Services/CategoryService');
 
-class CategorieController {
+class CategoryController {
 
     async getAllCategories(request, response) {
         try {
-            const categories = await CategorieService.getAllCategories();
+            const categories = await CategoryService.getAllCategories();
             response.json(categories);
         } catch (error) {
             response.status(500).json({ error: error.message });
@@ -14,7 +14,7 @@ class CategorieController {
 
     async getCategoryById(request, response) {
         try {
-            const category = await CategorieService.getCategoryById(request.params.id);
+            const category = await CategoryService.getCategoryById(request.params.id);
             response.json(category);
         } catch (error) {
             response.status(500).json({ error: error.message });
@@ -23,7 +23,7 @@ class CategorieController {
 
     async addCategory(request, response) {
         try {
-            const category = await CategorieService.addCategory(request.body);
+            const category = await CategoryService.addCategory(request.body);
             response.json(category);
         } catch (error) {
             response.status(500).json({ error: error.message });
@@ -32,7 +32,7 @@ class CategorieController {
 
     async updateCategory(request, response) {
         try {
-            const category = await CategorieService.updateCategory(request.params.id, request.body);
+            const category = await CategoryService.updateCategory(request.params.id, request.body);
             response.json(category);
         } catch (error) {
             response.status(500).json({ error: error.message });
@@ -41,7 +41,7 @@ class CategorieController {
 
     async deleteCategory(request, response) {
         try {
-            const category = await CategorieService.deleteCategory(request.params.id);
+            const category = await CategoryService.deleteCategory(request.params.id);
             response.json(category);
         } catch (error) {
             response.status(500).json({ error: error.message });
@@ -50,4 +50,4 @@ class CategorieController {
 
 }
 
-module.exports = new CategorieController();
+module.exports = new CategoryController();
