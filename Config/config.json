@@ -1,5 +1,5 @@
 {
-    "database" : "nexthub-API",
+    "database" : "nexthub",
     "username" : "root",
     "password" : "",
     "host" : "localhost",

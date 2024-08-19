@@ -7,7 +7,7 @@ class CategoryController {
             const categories = await CategoryService.getAllCategories();
             response.json(categories);
         } catch (error) {
-            response.status(500).json({ error: error.message });
+            response.status(500).json({ error: "Une erreur est survenue lors de la récupération des catégories." });
         }
     
 }
@@ -17,7 +17,7 @@ class CategoryController {
             const category = await CategoryService.getCategoryById(request.params.id);
             response.json(category);
         } catch (error) {
-            response.status(500).json({ error: error.message });
+            response.status(500).json({ error: "Une erreur est survenue lors de la récupération de la catégorie" });
         }
     }
 
@@ -26,7 +26,7 @@ class CategoryController {
             const category = await CategoryService.addCategory(request.body);
             response.json(category);
         } catch (error) {
-            response.status(500).json({ error: error.message });
+            response.status(500).json({ error: "Une erreur est survenue lors de l'ajout de la catégorie" });
         }
     }
 
@@ -35,7 +35,7 @@ class CategoryController {
             const category = await CategoryService.updateCategory(request.params.id, request.body);
             response.json(category);
         } catch (error) {
-            response.status(500).json({ error: error.message });
+            response.status(500).json({ error: "Une erreur est survenue lors de la modification de la catégorie" });
         }
     }
 
@@ -44,7 +44,7 @@ class CategoryController {
             const category = await CategoryService.deleteCategory(request.params.id);
             response.json(category);
         } catch (error) {
-            response.status(500).json({ error: error.message });
+            response.status(500).json({error: "Une erreur est survenue lors de la suppression de la catégorie"});
         }
     }
 

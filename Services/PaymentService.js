@@ -1,4 +1,4 @@
-const Payment = require('./Models/Payment');
+const Payment = require('../Models/Payment');
 
 class PaymentService {
     async getAllPayments() {

@@ -12,7 +12,7 @@ const port = 3001;
 app.use(cors());
 
 app.get('/hello',(request, response) => {
-    response.send('Hello World!');
+    response.send('Server is running! ��������');
 });
 
 app.use('/users', userRoutes);

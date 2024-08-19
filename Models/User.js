@@ -52,11 +52,11 @@ User.init({
     },
     created_at: {
         type: DataTypes.DATE,
-        defaultValue: Sequelize.NOW
+        defaultValue: sequelize.NOW
     },
     updated_at:{
         type: DataTypes.DATE,
-        defaultValue: Sequelize.NOW
+        defaultValue: sequelize.NOW
     }
 },{sequelize,
     modelName:"User",

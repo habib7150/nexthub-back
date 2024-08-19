@@ -2,7 +2,7 @@ const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../Config/Sequelize');
 const User = require('./User');
 const Product = require('./Product');
-const Review = require('./Review');
+
 
 class Review extends Model{};
 
@@ -47,9 +47,9 @@ Review.init({
 
 })
 
-Client.hasMany(Review,{as:'reviews', foreignKey: ('user_id','pr_id') });
+User.hasMany(Review,{as:'reviews', foreignKey: ('user_id','pr_id') });
 
-Review.belongsTo(Client,{as:'user', foreignKey:('user_id', 'pr_id')});
+Review.belongsTo(User,{as:'user', foreignKey:('user_id', 'pr_id')});
 
 Review.belongsTo(Product,{as:'product', foreignKey:'pr_id'});
 

@@ -1,5 +1,5 @@
 const express = require('express');
-const PaymentController = require('./Controllers/PaymentController');
+const PaymentController = require('../Controllers/PaymentController');
 const router = express.Router();
 
 router.get('/', (request, response) => {PaymentController.getAllPayments(request, response);});
