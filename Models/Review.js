@@ -9,6 +9,7 @@ class Review extends Model{};
 Review.init({
      user_id:{
         type: DataTypes.INTEGER,
+        primaryKey: true,
         references: {
             model: User,
             key: 'user_id'
@@ -17,6 +18,7 @@ Review.init({
     },
     pr_id:{
         type: DataTypes.INTEGER,
+        primaryKey: true,
         references: {
             model: Product,
             key: 'pr_id'
@@ -33,17 +35,17 @@ Review.init({
     },
     created_at:{
         type: DataTypes.DATE,
-        defaultValue: sequelize.fn('NOW')
+        defaultValue: sequelize.NOW
     },
     updated_at:{
         type: DataTypes.DATE,
-        defaultValue: sequelize.fn('NOW')
+        defaultValue: sequelize.NOW
     }
 },{
     sequelize,
     modelName: 'Review',
     tableName:'reviews',
-    timestamps: true
+    timestamps: false
 
 })
 

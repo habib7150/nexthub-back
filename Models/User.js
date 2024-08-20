@@ -22,7 +22,7 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    firs_name:{
+    first_name:{
         type: DataTypes.STRING,
         allowNull: true
     },
@@ -30,7 +30,7 @@ User.init({
         type: DataTypes.STRING,
         allowNull: true
     },
-    adress:{
+    address:{
         type: DataTypes.STRING,
         allowNull: true
     },
@@ -61,7 +61,7 @@ User.init({
 },{sequelize,
     modelName:"User",
     tableName:"users",
-    timestamps:true});
+    timestamps:false});
 
 module.exports = User;
 

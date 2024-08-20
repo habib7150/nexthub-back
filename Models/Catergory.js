@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../Config/Sequelize");
 
-const Product = require("./Product");
+
 
 class Category extends Model {}
 
@@ -24,22 +24,22 @@ Category.init(
     },
     created_at: {
       type: DataTypes.DATE,
-      defaultValue: sequelize.fn("NOW"),
+      defaultValue: sequelize.NOW
     },
     updated_at: {
       type: DataTypes.DATE,
-      defaultValue: sequelize.fn("NOW"),
+      defaultValue: sequelize.NOW
     },
   },
   {
     sequelize,
     modelName: "Category",
     tableName: "categories",
-    timestamps: true,
+    timestamps: false
   }
 );
 
-Category.hasMany(Product, { as: "products", foreignKey: "ca_id" });
-Product.belongsTo(Category, { as: "categorie", foreignKey: "ca_id" });
+
+
 
 module.exports = Category;

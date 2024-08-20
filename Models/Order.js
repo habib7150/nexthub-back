@@ -33,9 +33,9 @@ Order.init({
         sequelize,
         modelName: 'Order',
         tableName:'orders',
-        timestamps: true
+        timestamps: false
     });
 
-Order.hasOne(User,{as:'Users', foreignKey:'user_id'});
+
 
 module.exports = Order;

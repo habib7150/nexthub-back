@@ -3,7 +3,7 @@ const ReviewController = require('../Controllers/ReviewController');
 
 const router = express.Router();
 
-router.get('/',(request, response) => {ReviewController.getAllReview(request,response)});
+router.get('/',(request, response) => {ReviewController.getAllReviews(request,response)});
 
 router.get('/:id',(request, response) => {ReviewController.getReviewById(request,response)});
 

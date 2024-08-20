@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require('../Config/Sequelize');
+const Category = require('./Catergory');
 
 class Product extends Model {}
 
@@ -43,13 +44,27 @@ Product.init({
     },
     ca_id: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+            model: Category,
+            key: 'ca_id'
+        }
+
     }
 },{
     sequelize,
     modelName: "Product",
     tableName: "products",
     timestamps: false
-})
+});
+
+
+
+Product.belongsTo(Category, {
+    foreignKey: 'ca_id',
+    as: 'Category'
+});
+
+
 
 module.exports = Product;

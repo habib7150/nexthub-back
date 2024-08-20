@@ -34,7 +34,7 @@ Payment.init({
     sequelize,
     modelName:"Payment",
     tableName:"payments",
-    timestamps:true 
+    timestamps:false
 });
 
 module.exports = Payment;
