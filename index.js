@@ -5,6 +5,7 @@ const productRoutes = require('./Routes/ProductRoutes');
 const orderRoutes = require('./Routes/OrderRoutes');
 const paymentRoutes = require('./Routes/PaymentRoutes');
 const categoryRoutes = require('./Routes/CategoryRoutes');
+const orderDetailsRoutes = require('./Routes/OrderDetailsRoutes');
 const app = express();
 const cors = require('cors');
 const port = 3001;
@@ -22,6 +23,8 @@ app.use('/reviews', reviewRoutes);
 app.use('/products', productRoutes);
 
 app.use('/orders', orderRoutes);
+
+app.use('/orderdetails', orderDetailsRoutes);
 
 app.use('/payments', paymentRoutes);
 
