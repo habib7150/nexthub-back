@@ -2,6 +2,10 @@ const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../Config/Sequelize");
 
+const Order = require("./Order");
+
+
+
 class OrderDetails extends Model {}
 
 
@@ -37,7 +41,7 @@ OrderDetails.init({
     },
     updated_at: {
         type: DataTypes.DATE,
-        defaultValue:
+        defaultValue: DataTypes.NOW
     }
 },{
     sequelize,
@@ -45,5 +49,9 @@ OrderDetails.init({
     tableName: "order_details",
     timestamps: false
 });
+
+
+
+
 
 module.exports = OrderDetails;

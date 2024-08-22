@@ -1,7 +1,9 @@
 const {Model, DataTypes} = require("sequelize");
 const sequelize = require('../Config/Sequelize');
 const User = require('./User');
-const Product = require('./Product');
+
+
+const OrderDetails = require('./OrderDetails');
 
 class Order extends Model{};
 
@@ -27,7 +29,7 @@ Order.init({
             key: 'user_id'
         }
         
-    },
+    }
 
 },{
         sequelize,
@@ -36,6 +38,8 @@ Order.init({
         timestamps: false
     });
 
+   
+    
 
 
 module.exports = Order;

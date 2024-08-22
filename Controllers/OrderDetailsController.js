@@ -1,4 +1,4 @@
-const OrderDetailsService = require('./Services/OrderDetailsService');
+const OrderDetailsService = require('../Services/OrderDetailsService');
 
 class OrderDetailsController {
     async getAllOrderDetails(request, response) {
