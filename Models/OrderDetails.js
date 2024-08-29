@@ -18,14 +18,14 @@ OrderDetails.init({
     or_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: "orders",
+            model: "Order",
             key: "or_id",
         },
     },
     pr_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: "products",
+            model: "Product",
             key: "pr_id",
         },
     },

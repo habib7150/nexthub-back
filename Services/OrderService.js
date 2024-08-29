@@ -2,10 +2,7 @@ const Order = require('../Models/Order');
 
 class OrderService {
     async getAllOrders(){
-        return await Order.findAll({include:[{
-            model: Order,
-            as: 'order'
-        }]});
+        return await Order.findAll();
     }
 
     async getOrderById(orderId){

@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const OrderDetailsController = require('../Controllers/OrderDetailsController');
 
-router.get('/', (request, result) => { OrderDetailsController.getAllOrderDetails(request, result)});
+router.get('/', (request, response) => { OrderDetailsController.getAllOrderDetails(request, response)});
 
-router.get('/:id', (request, result) => { OrderDetailsController.getOrderDetailsById(request, result)});
+router.get('/:id', (request, response) => { OrderDetailsController.getOrderDetailsById(request, response)});
 
-router.post('/', (request, result) => { OrderDetailsController.addOrderDetails(request, result)});
+router.post('/', (request, response) => { OrderDetailsController.addOrderDetails(request, response)});
 
 module.exports = router;

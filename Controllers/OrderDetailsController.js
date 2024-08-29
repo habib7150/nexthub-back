@@ -4,6 +4,7 @@ class OrderDetailsController {
     async getAllOrderDetails(request, response) {
         try {
             const orderDetails = await OrderDetailsService.getAllOrderDetails();
+            
             response.json(orderDetails);
         } catch (error) {
             response.status(500).json({ error: error.message });

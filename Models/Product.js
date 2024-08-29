@@ -2,6 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require('../Config/Sequelize');
 const Category = require('./Catergory');
 
+
 class Product extends Model {}
 
 Product.init({
@@ -60,8 +61,7 @@ Product.init({
 
 
 
-Product.belongsTo(Category, {
-    foreignKey: 'ca_id',
+Product.belongsTo(Category, {foreignKey: 'ca_id',
     as: 'Category'
 });
 

@@ -12,13 +12,11 @@ class UserController {
 
     async getUserById(request, response) {
         try {
-            const user = await UserService.getUserById(request.params.userID);
-            if (!user) {
-                return response.status(404).json({ message: 'User not found' });
-            }
+            const user = await UserService.getUserById(request.params.id);
+        
             response.json(user);
         } catch (error) {
-            response.status(500).json({ error: error.message });
+            response.status(500).json({ error: 'User not found' });
         }
     }
 
